@@ -1,0 +1,100 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #5258aa;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1px 1px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+#logo {
+    width: 120px;
+    transition: transform 0.3s ease;
+}
+
+#logo:hover {
+    transform: rotate(360deg);
+}
+
+nav .nav-list {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-list li {
+    margin: 0 15px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    position: relative;
+}
+
+.nav-link::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #c40081;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: #c40081;
+    color: white;
+}
+
+.nav-link:hover::before {
+    transform: scaleX(1);
+}
+.typewriter p {
+    margin: 0;
+    padding: 0;
+    line-height: 1.5em; /* Ajuste de la altura de línea para mejor legibilidad */
+    font-family: monospace; /* Mantener la fuente de estilo máquina de escribir */
+}
+
+.typewriter strong {
+    font-weight: bold; /* Hacer que las palabras clave como GENESIS destaquen */
+    color: #2c3e50; /* Un color oscuro para destacar */
+}
+
+.typewriter h1 {
+    font-family: monospace;
+    border-right: 4px solid;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    animation: typing 4s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+/* Animación de escritura */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+/* Animación del cursor parpadeante */
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: black; }
+}
+

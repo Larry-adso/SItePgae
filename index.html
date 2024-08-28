@@ -6,6 +6,95 @@
     <title>Agnus IT</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" href="img/agnus.png" type="image/x-icon">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #5258aa;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1px 1px;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        #logo {
+            width: 120px;
+            transition: transform 0.3s ease;
+        }
+
+        #logo:hover {
+            transform: rotate(360deg);
+        }
+
+        nav .nav-list {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-list li {
+            margin: 0 15px;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            padding: 5px 10px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-link::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background-color: #c40081;
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .nav-link:hover {
+            background-color: #c40081;
+            color: white;
+        }
+
+        .nav-link:hover::before {
+            transform: scaleX(1);
+        }
+
+        .typewriter {
+            font-family: monospace;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            width: 600px; /* Ajuste de ancho para 6 líneas */
+            line-height: 1.5em; /* Ajuste del interlineado */
+            font-size: 18px; /* Ajuste del tamaño de fuente */
+            margin: 20px auto; /* Centramos el contenedor */
+        }
+
+        .typewriter p {
+            margin: 0;
+            padding: 0;
+        }
+
+        .typewriter strong {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -26,7 +115,7 @@
 
     <section id="section1">
         <div class="typewriter">
-            <h1 id="typewriter-text"></h1>
+            <div id="typewriter-text"></div>
         </div>
     </section>
     

@@ -5,6 +5,16 @@ document.addEventListener("DOMContentLoaded", function() {
         <p><strong>GENESIS</strong> permite a PYMES, grandes corporaciones y desarrolladores desplegar microservicios, máquinas virtuales y aplicaciones a un solo clic, gracias a su capacidad autoprovisionable y de fácil administración.</p>
     `;
     
-    // Configurar el texto para que aparezca como en una máquina de escribir
-    textElement.innerHTML = textToType;
+    let index = 0;
+    const speed = 50; // Velocidad del efecto de escritura
+
+    function typeWriter() {
+        if (index < textToType.length) {
+            textElement.innerHTML = textToType.substring(0, index + 1);
+            index++;
+            setTimeout(typeWriter, speed);
+        }
+    }
+
+    typeWriter();
 });

@@ -14,10 +14,11 @@ header {
 .logo-container {
     display: flex;
     align-items: center;
+    margin-left: 5%;
 }
 
 #logo {
-    width: 120px;
+    width: 160px;
     transition: transform 0.3s ease;
 }
 
@@ -65,36 +66,28 @@ nav .nav-list {
 .nav-link:hover::before {
     transform: scaleX(1);
 }
+
+.typewriter {
+    font-family: monospace;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    width: 600px; /* Ajuste de ancho para 6 líneas */
+    line-height: 1.5em; /* Ajuste del interlineado */
+    font-size: 18px; /* Ajuste del tamaño de fuente */
+    margin: 20px auto; /* Centramos el contenedor */
+    margin-left: 5%;
+}
+
 .typewriter p {
     margin: 0;
     padding: 0;
-    line-height: 1.5em; /* Ajuste de la altura de línea para mejor legibilidad */
-    font-family: monospace; /* Mantener la fuente de estilo máquina de escribir */
 }
 
 .typewriter strong {
-    font-weight: bold; /* Hacer que las palabras clave como GENESIS destaquen */
-    color: #2c3e50; /* Un color oscuro para destacar */
+    font-weight: bold;
+    color: #2c3e50;
 }
 
-.typewriter h1 {
-    font-family: monospace;
-    border-right: 4px solid;
-    white-space: nowrap;
-    overflow: hidden;
-    width: 0;
-    animation: typing 4s steps(40, end), blink-caret 0.75s step-end infinite;
+#section1{
+    background-color: #ffffff;
 }
-
-/* Animación de escritura */
-@keyframes typing {
-    from { width: 0; }
-    to { width: 100%; }
-}
-
-/* Animación del cursor parpadeante */
-@keyframes blink-caret {
-    from, to { border-color: transparent; }
-    50% { border-color: black; }
-}
-
